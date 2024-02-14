@@ -41,6 +41,7 @@ find_package(ros2_shared REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(tello_msgs REQUIRED)
+find_package(rclcpp_components REQUIRED)
 
 # Package includes not needed for CMake >= 2.8.11
 include_directories(
@@ -75,7 +76,8 @@ set(DRIVER_NODE_DEPS
   ros2_shared
   sensor_msgs
   std_msgs
-  tello_msgs)
+  tello_msgs
+  rclcpp_components)
 
 set(DRIVER_NODE_LIBS
   avcodec
@@ -127,7 +129,8 @@ set(JOY_NODE_DEPS
   geometry_msgs
   rclcpp
   sensor_msgs
-  tello_msgs)
+  tello_msgs
+  rclcpp_components)
 
 add_library(tello_joy_node SHARED
   ${JOY_NODE_SOURCES})
