@@ -32,6 +32,7 @@ find_package(rclcpp REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(tello_msgs REQUIRED)
+find_package(tello_driver REQUIRED)
 
 # Local includes
 include_directories(
@@ -59,6 +60,7 @@ ament_target_dependencies(
   rclcpp
   std_msgs
   tello_msgs
+  tello_driver
 )
 
 #=============
